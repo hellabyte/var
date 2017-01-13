@@ -94,6 +94,7 @@ CPU Study
 
 The following table was collected from [geekbench 3](https://browser.primatelabs.com/geekbench3/search)
  and from prices listed on [pc part picker](https://pcpartpicker.com/).
+See pdf in fig/ directory for results.
 
 BN        | P | C |TDP| L1KB | L2KB |  L3KB | MCS  | DMSC | DMMC | MPSC | MPMC | $ 
 ---------:|--:|--:|--:|-----:|-----:|------:|-----:|-----:|-----:|-----:|-----:|----:
