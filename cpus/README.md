@@ -44,6 +44,7 @@ COSTS
 -----
 
 #### 2016 Nov ####
+
          CPU | Cost
 -------------|------
 Xeon E5-2665 | $1440  
@@ -51,6 +52,7 @@ Xeon E5-2665 | $1440
     i7-6700K | $300  
 
 #### 2017 Jan ####
+
          CPU | Cost
 -------------|-----------------------------
 Xeon E5-2665 | NO LONGER AVAILABLE FOR SALE  
@@ -75,6 +77,7 @@ Xeon | $5k            | (Estimated based on 2x CPU + dual mobo + avg. server req
 
 EST POWER for $20k cluster
 --------------------------
+
 Cluster | Est. Nodes | Node (W) | Cluster (kW)| $/Year (assuming $.10 kWh)
 --------|------------|----------|-------------|-----------------------------
  Mathe  |     25     |     65   |   1.625     | $1423.50
