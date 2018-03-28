@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+export Q_FMT="%.7i %.8P %.7j %.2t %.10M %.5D %.3c %.3C %.12R %k"
+
+mq() {
+  args="${@}"
+  fmt="${Q_FMT}"
+  squeue -o "${fmt}" | head -1
+  if [[ -z "${args}" ]]; then
+    squeue -h -S i -o "${fmt}" -u $USER
+  else
+    squeue -h -S i -o "${fmt}" -u $USER | egrep -v "${args}"
+  fi
+}
+
+mqp() {
+	# For when the job ID is all that is needed
+  yq | egrep "${@}" | awk '{print $1}'
+}
+
+yip() {
+  args="${@}"
+  fmt='%10N %.10P %.3r %.6D %.6a %.18C %.12O %E'
+  sinfo -o "${fmt}" "${args}"
+}
+
+ypl() {
+  args="${@}"
+  fmt='%.10P %.5r %.6D %.18C'
+  sinfo -o "${fmt}" "${args}"
+}
+
+sai() {
+  # Slurm Acct Info
+  args="${@}"
+  sacctmgr list user $USER witha ${args[@]}
+}
+
+
+export EDITOR=vim
+
