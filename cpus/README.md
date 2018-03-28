@@ -45,21 +45,21 @@ COSTS
 
 #### 2016 Nov ####
 
- CPU         | Cost  
--------------|--------  
-Xeon E5-2665 | $1440  
-    i7-6700  | $290  
-    i7-6700K | $300  
+ CPU     | Cost
+---------|-------
+ E5-2665 | $1440
+i7-6700  | $290
+i7-6700K | $300
 
 #### 2017 Jan ####
 
- CPU         | Cost  
--------------|-----------------------------  
-Xeon E5-2665 | NO LONGER AVAILABLE FOR SALE  
-    i7-6700  | $300  
-    i7-6700K | $330   
-    i7-7700  | $310  
-    i7-7700K | $350  
+ CPU      | Cost
+----------|-----------------------------
+ E5-2665  | NO LONGER AVAILABLE FOR SALE
+ i7-6700  | $300
+ i7-6700K | $330
+ i7-7700  | $310
+ i7-7700K | $350
 
 
 EST BUILD COST FOR NODE REPLICATION
@@ -69,9 +69,9 @@ EST BUILD COST FOR NODE REPLICATION
 -----|----------------|--------------------------------------------------------
 Xeon | $5k            | (Estimated based on 2x CPU + dual mobo + avg. server req.)  
 6700K| $720           | https://pcpartpicker.com/list/GRQZzM  
-     | $670           | https://pcpartpicker.com/list/bY3qBP  
-     | $635           | https://pcpartpicker.com/list/PJY4BP  
-     | $580           | https://pcpartpicker.com/list/PY46qk  
+6700K| $670           | https://pcpartpicker.com/list/bY3qBP  
+6700K| $635           | https://pcpartpicker.com/list/PJY4BP  
+6700K| $580           | https://pcpartpicker.com/list/PY46qk  
 7700 | $710           | https://pcpartpicker.com/list/ydzxVY  
 
 
