@@ -62,6 +62,7 @@ Xeon E5-2665 | NO LONGER AVAILABLE FOR SALE
 
 EST BUILD COST FOR NODE REPLICATION
 -----------------------------------
+
  CPU | COST (pre tax) | link
 -----|----------------|--------------------------------------------------------
 Xeon | $5k            | (Estimated based on 2x CPU + dual mobo + avg. server req.)  
@@ -70,6 +71,7 @@ Xeon | $5k            | (Estimated based on 2x CPU + dual mobo + avg. server req
      | $635           | https://pcpartpicker.com/list/PJY4BP  
      | $580           | https://pcpartpicker.com/list/PY46qk  
 7700 | $710           | https://pcpartpicker.com/list/ydzxVY  
+
 
 EST POWER for $20k cluster
 --------------------------
