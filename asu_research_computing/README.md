@@ -3,8 +3,8 @@ ASU RESEARCHING COMPUTING
 
 Collection of notes on the ASU Research Computing clusters.
 
-LIMITS (2018-05-04)
--------------------
+AGAVE LIMITS (2018-05-04)
+-------------------------
 
 #### Disk Usage
 
