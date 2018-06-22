@@ -1,0 +1,55 @@
+\documentclass{standalone}
+\usepackage{tikz,amsmath}
+\usepackage{bm}
+\hoffset=-1in
+\textwidth=18cm
+\pagestyle{empty}
+
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+\begin{document}
+\begin{tikzpicture}[scale=2.0]
+  %% Coordinates for the square ---------------------------------------
+  % <Corner> <Bottom|Top> <Left|Right>
+  \coordinate (CBL)  at (-1.00,-1.000);  
+  \coordinate (CBR)  at ( 1.00,-1.000);  
+  \coordinate (CTR)  at ( 1.00, 1.000);  
+  \coordinate (CTL)  at (-1.00, 1.000);  
+
+  %% Spatial Coordinates and label positions --------------------------
+  % Origin
+  \coordinate (ORI) at (0,0);
+  % Extent of Axes Vectors
+  \coordinate (X)   at (.4,0);
+  \coordinate (Z)   at (0,.4); 
+  % X and Z Label positions
+  \coordinate (XL)  at (.48,0); 
+  \coordinate (ZL)  at (0,.48);
+
+  %% Cavity -----------------------------------------------------------
+  % Initial isotherms
+  \node [inner sep=0pt] (cmap) at (0,0) {
+    \includegraphics[width=4cm]{schematic_isotherms_cmap19}
+  };
+  % Cavity boundary
+  \draw[very thick] (CBL) -- (CBR) -- (CTR) -- (CTL) -- cycle;
+  % Axes arrows
+  \draw [<->,thick,black] (Z) |- (X);
+  \draw [<->,thick,black] (X) -| (Z);
+  % Axes labels
+  \node at (XL) {$x$};
+  \node at (ZL) {$z$};
+  %% Boundary condition annotations -----------------------------------
+  \node at (-1.65, 0.15) {$\bm{u}=\bm{0}$, $\ddfrac{\partial T}{\partial x}=0$};
+  \node at ( 1.65, 0.15) {$\bm{u}=\bm{0}$, $\ddfrac{\partial T}{\partial x}=0$};
+  \node at ( 0.00,-1.12) {$\bm{u}=\bm{0}$, $T=-0.5$};
+  \node at ( 0.00, 1.1) {$\bm{u}=\bm{0}$, $T= 0.5$};
+  %% Vertical forcing annotations -------------------------------------
+  % Vertical forcing arrow direction
+  \draw[<->,thick] (2.35, .5) -- (2.35,-.5);
+  % Vertical forcing definition
+  \node at (2.85,0) {$\alpha\cos(\omega t)$};
+
+\end{tikzpicture}
+
+\end{document}
