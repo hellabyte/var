@@ -1,0 +1,57 @@
+#!/usr/bin/env bash 
+# ======================================================================
+# remind
+# ----------------------------------------------------------------------
+# Simple script to set notifications through the macos Reminders app
+#
+# Ex.
+#
+#   remind -l list tomorrow 7:00 "My reminder header" "Notes for todo"
+#
+#
+# ======================================================================
+
+listcmd="defaultList"
+while getopts ":l:" opt; do
+  case "$opt" in
+    l )
+      list=$OPTARG
+      listcmd="lists.byName('$list')"
+      ;;
+    \? )
+      echo "Invalid Option: -$OPTARG" 1>&2
+      exit 1
+      ;;
+    : )
+      echo "Option Missing: -$OPTARG" 1>&2
+      exit 1
+      ;;
+  esac
+done
+shift $(( OPTIND - 1 ))
+
+date=$(gdate -d "${1}" +%m/%d/%Y)
+time="${2}"
+name="${3}"
+shift 3
+todo="${@}"
+
+osascript -l JavaScript - "$name" "$todo" "$date" "$time" << END
+
+const RemindersApp = Application('Reminders');
+
+function run(argv) {
+  [name, todo, date, time] = argv;
+  dueDate = new Date( date + " " + time);
+  reminder = RemindersApp.Reminder({
+    name: name,
+    body: todo,
+    priority: 1,
+    dueDate: dueDate
+  });
+  RemindersApp.${listcmd}.reminders.push(reminder);
+}
+
+END
+
+
